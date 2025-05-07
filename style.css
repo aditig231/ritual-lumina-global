@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -54,10 +53,19 @@ body {
   left: 0;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   min-width: 200px;
-  transition: all 0.3s ease-in-out;
+  flex-direction: column;
+}
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+}
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
 }
 .dropdown:hover .dropdown-content {
-  display: block;
+  display: flex;
   animation: fadeIn 0.2s ease-in-out;
 }
 @keyframes fadeIn {
@@ -119,13 +127,15 @@ body {
 .product-card {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   margin-bottom: 40px;
   gap: 30px;
 }
+.product-image {
+  flex: 0 0 300px;
+}
 .product-image img {
-  max-width: 300px;
   width: 100%;
   border-radius: 16px;
   animation: slideInLeft 1s ease forwards;
